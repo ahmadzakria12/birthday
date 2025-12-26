@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+    
+    <!-- Hidden audio player for background music -->
+    <audio id="background-music" autoplay loop>
+        <source src="videoplayback.mp4" type="audio/mp4">
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="main-container">
+        <!-- Top Banner with Pennant Flags -->
+        <div class="banner-container">
+            <div class="pennant-flags">
+                <div class="flag flag1"></div>
+                <div class="flag flag2"></div>
+                <div class="flag flag3"></div>
+                <div class="flag flag4"></div>
+                <div class="flag flag5"></div>
+                <div class="flag flag6"></div>
+                <div class="flag flag7"></div>
+                <div class="flag flag8"></div>
+            </div>
+        </div>
+
+        <!-- Main Title -->
+        <div class="title-section">
+            <h1 class="main-title">
+                <span class="title-happy">HAPPY</span>
+                <span class="title-birthday">Birthday</span>
+            </h1>
+        </div>
+
+        <!-- Clickable Greeting Card -->
+        <div class="card-wrapper">
+            <div class="greeting-card" id="greeting-card">
+                <div class="card-front">
+                    <div class="card-front-content">
+                        <p class="click-hint">👆 Click to Open</p>
+                        <div class="card-photo-area">
+                            <div class="photo-frame">
+                                <div class="photo-placeholder">
+                                    <span class="photo-icon">📷</span>
+                                    <p>Your Photo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-message">
+                        <h2 class="greeting-title">Happy Birthday! 🎉</h2>
+                        <p class="greeting-text">
+                            Wishing you a day filled with love, laughter, and all your heart's desires on your special day!
+                        </p>
+                        <p class="new-year-message">
+                            As we celebrate your birthday, I also wish you a wonderful New Year ahead filled with joy, success, and beautiful memories! May this new year bring you all the happiness and success you deserve! 🎊✨
+                        </p>
+                        <p class="signature">With Love,<br>Your Best Friend 💝</p>
+                        <button class="close-card-btn" onclick="closeCard()">Close Card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Message -->
+        <div class="birthday-message">
+            <p>Wishing you a day filled with love, laughter, and all your heart's desires on your special day!</p>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="decorations">
+            <!-- Left Balloon -->
+            <div class="deco-balloon balloon-left">
+                <div class="balloon-shape balloon-pink"></div>
+                <div class="balloon-string"></div>
+            </div>
+
+            <!-- Right Balloon -->
+            <div class="deco-balloon balloon-right">
+                <div class="balloon-shape balloon-pink"></div>
+                <div class="balloon-string"></div>
+            </div>
+
+            <!-- Gift Boxes (Bottom Left) -->
+            <div class="gift-boxes-left">
+                <div class="gift-box gift-large">
+                    <div class="gift-ribbon"></div>
+                </div>
+                <div class="gift-box gift-small">
+                    <div class="gift-ribbon-small"></div>
+                    <div class="gift-star">⭐</div>
+                </div>
+            </div>
+
+            <!-- Cake and Party Hat (Bottom Right) -->
+            <div class="cake-party-right">
+                <div class="birthday-cake">
+                    <div class="cake-tier cake-top"></div>
+                    <div class="cake-tier cake-bottom"></div>
+                    <div class="cake-candles">
+                        <div class="candle candle1">
+                            <div class="flame flame1"></div>
+                        </div>
+                        <div class="candle candle2">
+                            <div class="flame flame2"></div>
+                        </div>
+                        <div class="candle candle3">
+                            <div class="flame flame3"></div>
+                        </div>
+                    </div>
+                    <div class="cake-star">⭐</div>
+                </div>
+                <div class="party-hat">
+                    <div class="hat-body"></div>
+                    <div class="hat-star">⭐</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music Controls (Minimal) -->
+        <div class="music-controls-minimal">
+            <button id="play-btn" class="music-btn-minimal">⏸️</button>
+            <button id="stop-btn" class="music-btn-minimal">⏹️</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
