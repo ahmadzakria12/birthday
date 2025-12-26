@@ -166,9 +166,10 @@ body {
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 30px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .card-front-content {
@@ -234,6 +235,9 @@ body {
 .card-message {
     text-align: center;
     width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .greeting-title {
@@ -629,61 +633,341 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .main-container {
-        padding: 20px 15px;
+        max-width: 90%;
     }
 
     .title-happy {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     .title-birthday {
-        font-size: 3em;
+        font-size: 3.5em;
+    }
+
+    .greeting-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 15px 10px;
+        max-width: 100%;
+    }
+
+    .banner-container {
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .flag {
+        width: 35px;
+        height: 45px;
+    }
+
+    .title-section {
+        margin-bottom: 25px;
+    }
+
+    .title-happy {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+    }
+
+    .title-birthday {
+        font-size: 2.8em;
+    }
+
+    .title-birthday::after {
+        height: 2px;
     }
 
     .greeting-card {
         width: 95%;
-        height: 450px;
+        max-width: 380px;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .card-front,
+    .card-back {
+        padding: 20px;
+    }
+
+    .card-front-content {
+        padding: 15px;
+    }
+
+    .click-hint {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .photo-frame {
+        padding: 8px;
+        border-width: 6px;
+    }
+
+    .card-message {
+        padding: 15px 10px;
+    }
+
+    .greeting-title {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .greeting-text {
+        font-size: 0.95em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .new-year-message {
+        font-size: 0.9em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .signature {
+        font-size: 1.3em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .close-card-btn {
+        padding: 10px 25px;
+        font-size: 0.9em;
     }
 
     .deco-balloon {
         display: none;
     }
 
+    .decorations {
+        min-height: 300px;
+        margin-top: 30px;
+    }
+
     .gift-boxes-left,
     .cake-party-right {
-        transform: scale(0.8);
+        transform: scale(0.7);
+    }
+
+    .gift-boxes-left {
+        left: 2%;
+        bottom: 8%;
+    }
+
+    .cake-party-right {
+        right: 2%;
+        bottom: 5%;
+    }
+
+    .birthday-message {
+        margin: 30px 0;
+        padding: 0 15px;
     }
 
     .birthday-message p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .music-controls-minimal {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .music-btn-minimal {
+        width: 45px;
+        height: 45px;
         font-size: 1em;
     }
 }
 
 @media (max-width: 480px) {
+    .main-container {
+        padding: 10px 8px;
+    }
+
+    .banner-container {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .pennant-flags {
+        gap: 3px;
+        padding-top: 5px;
+    }
+
+    .flag {
+        width: 28px;
+        height: 35px;
+    }
+
+    .title-section {
+        margin-bottom: 20px;
+    }
+
     .title-happy {
-        font-size: 1.5em;
+        font-size: 1.4em;
+        letter-spacing: 1px;
     }
 
     .title-birthday {
-        font-size: 2.5em;
+        font-size: 2.2em;
+    }
+
+    .title-birthday::after {
+        height: 2px;
+        bottom: -3px;
+    }
+
+    .card-wrapper {
+        margin: 25px 0;
     }
 
     .greeting-card {
-        height: 400px;
+        width: 98%;
+        max-width: 100%;
+        min-height: 450px;
+        height: auto;
     }
 
+    .card-front,
     .card-back {
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .card-front-content {
+        padding: 10px;
+    }
+
+    .click-hint {
+        font-size: 0.9em;
+        margin-bottom: 12px;
+    }
+
+    .photo-frame {
+        padding: 6px;
+        border-width: 5px;
+    }
+
+    .photo-icon {
+        font-size: 3em;
+        margin-bottom: 8px;
+    }
+
+    .photo-placeholder p {
+        font-size: 0.9em;
+    }
+
+    .card-message {
+        padding: 10px 5px;
     }
 
     .greeting-title {
-        font-size: 2em;
+        font-size: 1.6em;
+        margin-bottom: 12px;
+    }
+
+    .greeting-text {
+        font-size: 0.85em;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .new-year-message {
+        font-size: 0.8em;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .signature {
+        font-size: 1.1em;
+        margin-top: 15px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .close-card-btn {
+        padding: 8px 20px;
+        font-size: 0.85em;
+    }
+
+    .decorations {
+        min-height: 250px;
+        margin-top: 20px;
     }
 
     .gift-boxes-left,
     .cake-party-right {
-        transform: scale(0.6);
+        transform: scale(0.5);
+    }
+
+    .gift-boxes-left {
+        left: 1%;
+        bottom: 5%;
+    }
+
+    .cake-party-right {
+        right: 1%;
+        bottom: 3%;
+    }
+
+    .birthday-message {
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+
+    .birthday-message p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+
+    .music-controls-minimal {
+        bottom: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    .music-btn-minimal {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 360px) {
+    .title-happy {
+        font-size: 1.2em;
+    }
+
+    .title-birthday {
+        font-size: 1.9em;
+    }
+
+    .greeting-card {
+        min-height: 400px;
+    }
+
+    .greeting-title {
+        font-size: 1.4em;
+    }
+
+    .greeting-text {
+        font-size: 0.75em;
+    }
+
+    .new-year-message {
+        font-size: 0.7em;
+    }
+
+    .signature {
+        font-size: 1em;
     }
 }
